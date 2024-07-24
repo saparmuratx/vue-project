@@ -1,14 +1,17 @@
 <script setup>
 import { onMounted, reactive, ref } from 'vue';
-import { useRoute, RouterLink } from 'vue-router';
+import { useRoute, RouterLink, useRouter } from 'vue-router';
 import PulseLoader from 'vue-spinner/src/PulseLoader.vue';
 import axios from 'axios';
 
 import GoBackButton from '@/components/GoBackButton.vue';
-import router from '@/router';
+import { useToast } from 'vue-toastification';
+// import router from '@/router';
 
 
 const route = useRoute();
+const router = useRouter();
+const toast = useToast();
 
 const jobId = route.params.id;
 
@@ -16,6 +19,16 @@ const state = reactive({
   job: {},
   isLoading: true
 })
+
+const previousRoute = router.options.history.state.back;
+
+const title = ref("Go Back")
+
+if (previousRoute === "/jobs") {
+  title.value = "Go Back to Jobs Listing"
+} else if (previousRoute === "/") {
+  title.value = "Go Back to Home"
+}
 
 onMounted(async () => {
   try {
@@ -32,24 +45,32 @@ const goBack = () => {
   router.go(-1)
 }
 
-const previousRoute = router.options.history.state.back;
+const deleteJob = async () => {
+  try {
+    const confirm = window.confirm("Are you sure you want to delete this Job?")
 
-const title = ref("Go Back To Home")
+    if (confirm) {
+      const response = await axios.delete(`/api/jobs/${jobId}`)
 
-if (previousRoute === "/jobs") {
-  title.value = "Go Back to Jobs Listing"
-}
+      toast.success("Job Deleted Successfully")
+      router.push('/jobs')
+    }
+  } catch (error) {
+    toast.error('Job Was Not Deleted');
+    console.error("Error deleting job.");
+  }
+};
 
 </script>
 
 <template>
 
-  <GoBackButton @click.native="goBack" :title="title" />
 
   <div v-if="state.isLoading" class="text-center text-gray-500 py-6">
     <PulseLoader />
   </div>
-  <section v-else class="bg-green-50">
+  <section v-else class="bg-gray-100">
+    <GoBackButton @click.native="goBack" :title="title" />
     <div class="container m-auto py-10 px-6">
       <div class="grid grid-cols-1 md:grid-cols-70/30 w-full gap-6">
         <main>
@@ -57,7 +78,7 @@ if (previousRoute === "/jobs") {
             <div class="text-gray-500 mb-4">{{ state.job.type }}</div>
             <h1 class="text-3xl font-bold mb-4">{{ state.job.title }}</h1>
             <div class="text-gray-500 mb-4 flex align-middle justify-center md:justify-start">
-              <i class="fa-solid fa-location-dot text-lg text-orange-700 mr-2"></i>
+              <i class="pi pi-map-marker text-lg text-orange-700 mr-2"></i>
               <p class="text-orange-700">{{ state.job.location }}</p>
             </div>
           </div>
@@ -93,7 +114,7 @@ if (previousRoute === "/jobs") {
 
             <h3 class="text-xl">Contact Email:</h3>
 
-            <p class="my-2 bg-green-100 p-2 font-bold">
+            <p class="my-2 bg-gray-100 p-2 font-bold">
               {{ state.job.company.contactEmail }}
             </p>
 
@@ -109,7 +130,7 @@ if (previousRoute === "/jobs") {
               class="bg-green-500 hover:bg-green-600 text-white text-center font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block">
               Edit Job
             </RouterLink>
-            <button
+            <button @click="deleteJob"
               class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block">
               Delete Job
             </button>
