@@ -170,16 +170,16 @@
     },
     {
       "id": "13",
-      "title": "Machine Learning Engineer",
-      "type": "Full-Time",
-      "description": "Seeking a Machine Learning Engineer to develop AI models and algorithms for our products.",
-      "location": "Mountain View, CA",
-      "salary": "$130K - $170K",
+      "title": "AI Research Scientist",
+      "type": "Remote",
+      "description": "We are looking for an AI Research Scientist to develop cutting-edge algorithms and models for machine learning applications.",
+      "location": "Beijing, China",
+      "salary": "$130K - $160K",
       "company": {
-        "name": "Google",
-        "description": "Google is a multinational technology company specializing in Internet-related services and products.",
-        "contactEmail": "careers@google.com",
-        "contactPhone": "555-013-4567"
+        "name": "Baidu",
+        "description": "Baidu is a leading Chinese technology company specializing in Internet-related services and artificial intelligence.",
+        "contactEmail": "jobs@baidu.com",
+        "contactPhone": "555-025-6789"
       }
     },
     {
@@ -338,45 +338,31 @@
     },
     {
       "id": "25",
-      "title": "AI Research Scientist",
-      "type": "Remote",
-      "description": "We are looking for an AI Research Scientist to develop cutting-edge algorithms and models for machine learning applications.",
-      "location": "Beijing, China",
-      "salary": "$130K - $160K",
+      "title": "Machine Learning Engineer",
+      "type": "Full-Time",
+      "description": "Seeking a Machine Learning Engineer to develop AI models and algorithms for our products.",
+      "location": "Mountain View, CA",
+      "salary": "$130K - $170K",
       "company": {
-        "name": "Baidu",
-        "description": "Baidu is a leading Chinese technology company specializing in Internet-related services and artificial intelligence.",
-        "contactEmail": "jobs@baidu.com",
-        "contactPhone": "555-025-6789"
+        "name": "Google",
+        "description": "Google is a multinational technology company specializing in Internet-related services and products.",
+        "contactEmail": "careers@google.com",
+        "contactPhone": "555-013-4567"
       }
     },
     {
-      "id": "26",
-      "title": "Cloud Solutions Architect",
+      "title": "Junior/Middle Full-Stack Developer(Python)",
       "type": "Full-Time",
-      "description": "Join our team as a Cloud Solutions Architect to design and implement cloud-based solutions for our clients.",
-      "location": "Tokyo, Japan",
-      "salary": "$140K - $180K",
+      "location": "Bishkek, Kyrgyzstan",
+      "description": "\nHi! We are looking for up-and-coming developers for our small team! We help entrepreneurs and investors around the world connect and build strong business relationships.\n\n\nOur stack:\n\n    Python(Flask, FastAPI) - 70% of the work\n    JS(Vue, Vanilla) - 20% of the work\n    TailwindCSS\n    Typesense\n    Stripe\n    Docker\n    GCloud(Run, Build, Artifact Storage, Compute Engine, Storage)\n    PostrgreSQL, SQLite\n\n\nYou don't have to know everything, but we prefer applicants with more skills.\n\n\nRequirements:\n\n    Good English skills(Upper Intermediate and higher). This is important as half of our team speaks only in English.\n    Very good communication skills. We look for individuals, who are articulate and aren't afraid to speak up.\n    Good CV. We are looking through dozens of resumes, which makes it very difficult and time-consuming. We prefer portfolio/cv websites and not PDF files.\n\n\nWe offer Junior to Middle positions, so don't hesitate to apply!\n\n\nPlease message us including your CV, portfolio and a short message summarizing why you are a good fit to us.",
+      "salary": "$50K - $60K",
       "company": {
-        "name": "Sony",
-        "description": "Sony is a multinational conglomerate corporation known for its electronics, gaming, and entertainment products.",
-        "contactEmail": "careers@sony.com",
-        "contactPhone": "555-026-7890"
-      }
-    },
-    {
-      "id": "27",
-      "title": "Cybersecurity Analyst",
-      "type": "Full-Time",
-      "description": "We are looking for a Cybersecurity Analyst to protect our systems and data from cyber threats.",
-      "location": "Seoul, South Korea",
-      "salary": "$110K - $140K",
-      "company": {
-        "name": "LG Electronics",
-        "description": "LG Electronics is a global leader in consumer electronics and home appliances, committed to innovation and quality.",
-        "contactEmail": "security@lge.com",
-        "contactPhone": "555-027-8901"
-      }
+        "name": " Globalify Limited",
+        "description": "Unlock your business's potential with our extensive network of investors and partners. We're here to help you secure the funding you need to take you to the next level. ",
+        "contactEmail": "partner@globalify.xyz",
+        "contactPhone": "sequence of not very random numbers"
+      },
+      "id": "26"
     },
     {
       "id": "28",
@@ -407,32 +393,32 @@
       }
     },
     {
-      "id": "30",
-      "title": "Blockchain Developer",
-      "type": "Remote",
-      "description": "Join our team as a Blockchain Developer to design and implement blockchain-based solutions for various applications.",
-      "location": "Beijing, China",
-      "salary": "$120K - $150K",
+      "title": "User Personal Data Seller Intern",
+      "type": "Internship",
+      "location": "Menlo Park, California, USA",
+      "description": "Maximize profits by selling user data. Negotiate deals. Ignore compliance. Repeat.",
+      "salary": "$50K - $60K",
       "company": {
-        "name": "Xiaomi",
-        "description": "Xiaomi is a Chinese electronics company known for its smartphones and smart home products, focusing on innovation and quality.",
-        "contactEmail": "jobs@xiaomi.com",
+        "name": "Meta Inc.",
+        "description": "Meta is a tech giant that thrives on monetizing user data. Acting as a data broker, it connects businesses with rich user insights for targeted advertising. While it pays lip service to compliance, the real focus is on maximizing profits through data-driven strategies.",
+        "contactEmail": "jobs@meta.com",
         "contactPhone": "555-030-1234"
-      }
+      },
+      "id": "30"
     },
     {
-      "id": "059a",
-      "type": "Full-Time",
       "title": "CEO for Apple Inc.",
-      "description": "selling apples",
-      "salary": "$100K - $125K",
+      "type": "Full-Time",
       "location": "California, Cupertino",
+      "description": "sell apples at stupidly high price",
+      "salary": "Over $200K",
       "company": {
         "name": "Apple Inc.",
-        "description": "apples",
+        "description": "selling overpriced apples ",
         "contactEmail": "jobs@apple.com",
-        "contactPhone": "996500200100"
-      }
+        "contactPhone": "+996500200200"
+      },
+      "id": "e595"
     }
   ]
 }
