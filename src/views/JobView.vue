@@ -18,11 +18,11 @@ const jobId = route.params.id;
 const state = reactive({
   job: {},
   isLoading: true
-})
+});
 
 const previousRoute = router.options.history.state.back;
 
-const title = ref("Go Back")
+const title = ref("Go Back");
 
 if (previousRoute === "/jobs") {
   title.value = "Go Back to Jobs Listing"
@@ -35,25 +35,26 @@ onMounted(async () => {
     const response = await axios.get(`/api/jobs/${jobId}`)
     state.job = response.data;
   } catch (error) {
-    console.error(`Error fetching single job data: ${jobId}`, error)
+    console.error(`Error fetching single job data: ${jobId}`, error);
+    router.push("/not-found");
   } finally {
     state.isLoading = false;
   }
 });
 
 const goBack = () => {
-  router.go(-1)
-}
+  router.go(-1);
+};
 
 const deleteJob = async () => {
   try {
-    const confirm = window.confirm("Are you sure you want to delete this Job?")
+    const confirm = window.confirm("Are you sure you want to delete this Job?");
 
     if (confirm) {
       const response = await axios.delete(`/api/jobs/${jobId}`)
 
-      toast.success("Job Deleted Successfully")
-      router.push('/jobs')
+      toast.success("Job Deleted Successfully");
+      router.push('/jobs');
     }
   } catch (error) {
     toast.error('Job Was Not Deleted');
